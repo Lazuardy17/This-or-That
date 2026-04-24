@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, session, redirect, url_for
 import random
 
 app = Flask(__name__)
-app.secret_key = 'kunci_rahasia_untuk_session_sangat_aman'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
