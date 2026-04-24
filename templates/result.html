@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>This or That</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Tier List</h1>        
+        <ol>
+            {% for item in items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
+
+        <br>
+        <a href="{{ url_for('index') }}" class="btn" style="text-decoration: none;">Do another list</a>
+    </div>
+</body>
+</html>

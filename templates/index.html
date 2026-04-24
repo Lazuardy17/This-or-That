@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>This or That</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>This or That</h1>
+        <p>Add something in this list below (max 100 items).</p>
+        
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <textarea name="items" placeholder="Item 1&#10;Item 2&#10;Item 3&#10;and so on...">{{ raw_items }}</textarea>
+            <button type="submit" class="btn">Compare!</button>
+        </form>
+    </div>
+</body>
+</html>

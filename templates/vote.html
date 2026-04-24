@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>This or That</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>This or That</h2>
+        <p>List progress: {{ progress }}%</p>
+        
+        <form method="POST" class="vote-container">
+            <button type="submit" name="winner" value="curr" class="vote-btn">{{ curr }}</button>
+            
+            <div class="vs-text">VS</div>
+            
+            <button type="submit" name="winner" value="cmp" class="vote-btn">{{ cmp }}</button>
+        </form>
+    </div>
+</body>
+</html>
